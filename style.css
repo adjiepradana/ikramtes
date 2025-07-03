@@ -224,9 +224,10 @@ p {
   }
 
   .p-content {
+    padding: 20px;
     font-size: 16px;
     margin: 15px;
-    padding: 0 10px;
+
   }
 
   .service-box-box {
