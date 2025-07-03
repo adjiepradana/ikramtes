@@ -1,0 +1,290 @@
+*,
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #01184d, #1a3a6d);
+  color: white;
+}
+
+
+.container-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.ul-navbar {
+    color: white;
+    text-shadow: 0, 0, 0, 10px;
+    display: flex;
+    align-items: right;
+    justify-content: center;
+}
+/* Navbar item */
+.li-navbar{
+  list-style:none;
+  padding:20px 28px;
+  font:700 20px 'Segoe UI',sans-serif;
+  position:relative;
+  /*pentingutkpseudo‑element*/cursor:pointer;
+  transition:color .3s,transform .3s cubic-bezier(.25,.8,.25,1);
+  -webkit-transition:color .3s,transform .3s cubic-bezier(.25,.8,.25,1);
+  -moz-transition:color .3s,transform .3s cubic-bezier(.25,.8,.25,1);
+  -ms-transition:color .3s,transform .3s cubic-bezier(.25,.8,.25,1);
+  -o-transition:color .3s,transform .3s cubic-bezier(.25,.8,.25,1);
+}
+
+/* Garis bawah animasi + sedikit zoom & neon‑glow */
+.li-navbar::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:8px;                        /* jarak dari teks */
+  width:0;
+  height:3px;
+  background:linear-gradient(90deg,#00d2ff,#00ffc6,#ffdd00);
+  border-radius:2px;
+  transform:translateX(-50%);
+  transition:width .35s ease-out;
+}
+
+.li-navbar:hover{
+  color:#ffdd00;                     /* ganti warna teks saat hover */
+  transform:translateY(-2px) scale(1.05);
+  text-shadow:0 0 8px rgba(255,221,0,.7);
+}
+
+.li-navbar:hover::after{
+  width:80%;                         /* garis memanjang */
+}
+
+/* (Opsional) animasi warna teks terus‑menerus saat di‑hover */
+@keyframes gradientText{
+  0%{background-position:0 50%}
+  100%{background-position:100% 50%}
+}
+.li-navbar:hover{
+  background:linear-gradient(90deg,#00d2ff,#ff4ecd,#00d2ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:gradientText 2s linear infinite;
+  background-size:200% auto;
+  -webkit-animation:gradientText 2s linear infinite;
+}
+
+
+.container-content {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-class {
+    margin-top: 80px;
+    width: 768px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.img-class:hover {
+    background-color: lightskyblue;
+    transition: .5s ease-in;
+    -webkit-transition: .5s ease-in;
+    -moz-transition: .5s ease-in;
+    -ms-transition: .5s ease-in;
+    -o-transition: .5s ease-in;
+}
+@keyframes autoHoverEffect {
+  0%, 100% {
+    background-color: transparent;
+  }
+  50% {
+    background: lightblue;
+  }
+}
+
+.img-class {
+  animation: autoHoverEffect 3s ease-in-out infinite;
+}
+
+.p-content {
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 50px;
+}
+
+.container-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+}
+
+.img1 {
+    width: 768px;
+    height: 500px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  width: 300px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+.icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+p {
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+.container-footer {
+  gap: 38px;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.p-footer {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Ukuran Hp */
+@media (max-width: 480px) {
+  .ul-navbar {
+    flex-direction: column;
+  }
+  
+  .li-navbar {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .img-class {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .p-content {
+    font-size: 16px;
+    margin: 15px;
+    padding: 0 10px;
+  }
+
+  .service-box-box {
+    width: 90%;
+  }
+
+  .p-footer {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+.logo-navbar {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 20px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+}
+
+/* Perbaikan navbar agar sejajar */
+.container-navbar {
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .ul-navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
+  }
+
+  .ul-navbar.show {
+    display: flex;
+  }
+
+  .li-navbar {
+    text-align: center;
+    padding: 15px;
+  }
+}
